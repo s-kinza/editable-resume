@@ -1,0 +1,196 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #2c3e50; /* Darker background */
+  color: #ecf0f1; /* Light text for contrast */
+  min-height: 100vh;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2.8rem; /* Slightly larger */
+  color: #ecf0f1;
+  font-weight: 700; /* Heavier font weight */
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #ecf0f1;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  padding: 30px;
+  background-color: #34495e; /* Darker form background */
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  margin-right: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ecf0f1; /* Light label text */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 2px solid #95a5a6; /* Light border */
+  border-radius: 8px;
+  background-color: #f1f1f1; /* Slightly darker input */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3498db; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5); /* Add shadow on focus */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Button Styling */
+.generate-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #e67e22; /* Bright orange */
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  margin-top: 25px;
+}
+
+.generate-btn:hover {
+  background-color: #d35400; /* Darker orange on hover */
+  box-shadow: 0 10px 30px rgba(211, 84, 0, 0.5);
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Resume Preview Section */
+.resume-section {
+  flex: 1;
+  background-color: #34495e;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  position: relative;
+}
+
+.resume-section h2 {
+  text-align: center;
+}
+
+#resumeOutput {
+  padding: 25px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background-color: #2c3e50; /* Match background */
+  min-height: 300px;
+  color: #ecf0f1; /* Light text */
+}
+
+/* Edit Button */
+.edit-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 25px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #c0392b; /* Darker red */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section,
+  .resume-section {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .form-group label {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .form-section,
+  .resume-section {
+    padding: 20px;
+  }
+
+  .generate-btn {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}
